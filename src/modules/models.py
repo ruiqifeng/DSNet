@@ -78,7 +78,7 @@ class GCNExtractor(nn.Module):
     def forward(self, x):
         x = x.squeeze(0)
         edge_indices, edge_weights = self.create_graph(x, keep_ratio=0.3)
-        out = self.gcn(x, edge_indices, edge_weights)
+        out = self.gcn(x, edge_indices.long(), edge_weights)
         out = out.unsqueeze(0)
         return out
 
