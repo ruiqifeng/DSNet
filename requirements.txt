@@ -6,5 +6,7 @@ numpy
 opencv-python
 torch
 torchvision
-
-
+torch-scatter
+torch-sparse
+torch-cluster
+torch-geometric
